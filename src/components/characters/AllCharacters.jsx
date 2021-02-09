@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCharacters } from '../../services/rickAndMortyApi';
+import { getCharacters } from '../../services/lastAirbender';
 import CharacterList from './CharacterList';
 
 

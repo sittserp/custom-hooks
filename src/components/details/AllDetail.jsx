@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDetails } from '../../services/rickAndMortyDetails';
+import { getDetails } from '../../services/lastAirbenderDetails';
 import Detail from './Detail';
 
 

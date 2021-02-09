@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Character = ({ name, image, id }) => (
-  <Link key={id} to = {`/details/${id}`}>
+const Character = ({ name, photoUrl, _id }) => (
+  <Link key={_id} to = {`/details/${_id}`}>
     <figure>
-      <img src={image} />
+      <img src={photoUrl} />
       <figcaption>{name}</figcaption>
     </figure>
   </Link>
@@ -13,8 +13,8 @@ const Character = ({ name, image, id }) => (
 
 Character.propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  photoUrl: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired
 };
 
 export default Character;

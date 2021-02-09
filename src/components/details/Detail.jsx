@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Detail = ({ name, image, status, species }) => (
+const Detail = ({ name, photoUrl, affiliation, allies }) => (
   <figure>
-    <img src={image} />
+    <img src={photoUrl} />
     <figcaption>{name}</figcaption>
-    <figcaption>{status}</figcaption>
-    <figcaption>{species}</figcaption>
+    <figcaption>Affiliation: {affiliation}</figcaption>
+    <figcaption>Allies: {allies}</figcaption>
   </figure>
 );
 
 Detail.propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired
+  photoUrl: PropTypes.string.isRequired,
+  affiliation: PropTypes.string.isRequired,
+  allies: PropTypes.string.isRequired
 };
 
 export default Detail;

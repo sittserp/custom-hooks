@@ -20,7 +20,7 @@ CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    photoUrl: PropTypes.string.isRequired
   })).isRequired
 };
 
