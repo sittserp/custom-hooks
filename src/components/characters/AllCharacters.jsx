@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { getCharacters } from '../../services/lastAirbender';
+import React from 'react';
+// import { getCharacters } from '../../services/lastAirbender';
 import CharacterList from './CharacterList';
+import { useCharacters } from '../../hooks/characters';
 
 
 const AllCharacters = () => {
-  const [loading, setLoading] = useState(true);
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    getCharacters().then((characters) => {
-      setCharacters(characters);
-      setLoading(false);
-    });
-  }, []);
+  const { loading, characters } = useCharacters();
 
   if (loading) return <h1>Loading</h1>;
   return <CharacterList characters={characters} />;
