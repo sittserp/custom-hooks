@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getCharacters } from '../services/lastAirbender';
 import { getDetails } from '../services/lastAirbenderDetails';
+import { useParams } from 'react-router-dom';
 
 export const useCharacters = () => {
   const [loading, setLoading] = useState(true);
@@ -20,9 +21,10 @@ export const useCharacters = () => {
   };
 };
 
-export const useCharacterById = id => {
+export const useCharacterById = () => {
   const [loading, setLoading] = useState(true);
   const [detail, setDetail] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
     getDetails(id)

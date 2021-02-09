@@ -1,5 +1,4 @@
 import React from 'react';
-// import { getCharacters } from '../../services/lastAirbender';
 import CharacterList from './CharacterList';
 import { useCharacters } from '../../hooks/characters';
 

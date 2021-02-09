@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { getDetails } from '../../services/lastAirbenderDetails';
+import React from 'react';
 import Detail from './Detail';
-
+import { useCharacterById } from '../../hooks/characters';
 
 const AllDetail = () => {
-  const [loading, setLoading] = useState(true);
-  const [detail, setDetail] = useState([]);
-  const { id } = useParams();
-
-  useEffect(() => {
-    getDetails(id).then((detail) => {
-      setDetail(detail);
-      setLoading(false);
-    });
-  }, []);
+  const { loading, detail } = useCharacterById();
 
   if (loading) return <h1>Loading</h1>;
   return <Detail {...detail} />;
