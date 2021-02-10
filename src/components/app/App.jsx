@@ -7,12 +7,14 @@ import {
 } from 'react-router-dom';
 import Home from '../characters/AllCharacters';
 import Details from '../details/AllDetail';
+import Header from '../header/Header';
 
 export default class App extends React.Component { 
   render() {
     return (
       <>
         <Router>
+          <Header />
           <Switch>
             <Route
               exact
