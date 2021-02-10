@@ -5,8 +5,12 @@ exports[`Detail component renders Detail 1`] = `
   <figure>
     <img />
     <figcaption />
-    <figcaption />
-    <figcaption />
+    <figcaption>
+      Affiliation: 
+    </figcaption>
+    <figcaption>
+      Allies: 
+    </figcaption>
   </figure>
 </DocumentFragment>
 `;
