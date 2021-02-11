@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import { ThemeProvider } from '../../state/themeContext';
 import Home from '../characters/AllCharacters';
 import Details from '../details/AllDetail';
 import Header from '../header/Header';
@@ -14,7 +15,9 @@ export default class App extends React.Component {
     return (
       <>
         <Router>
-          <Header />
+          <ThemeProvider>
+            <Header />
+          </ThemeProvider>
           <Switch>
             <Route
               exact
