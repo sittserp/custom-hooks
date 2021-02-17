@@ -17,18 +17,18 @@ export default class App extends React.Component {
         <Router>
           <ThemeProvider>
             <Header />
+            <Switch>
+              <Route
+                exact
+                path="/"
+                component = { Home }
+              />
+              <Route
+                path="/details/:id" 
+                component = { Details }
+              />
+            </Switch>
           </ThemeProvider>
-          <Switch>
-            <Route
-              exact
-              path="/"
-              component = { Home }
-            />
-            <Route
-              path="/details/:id" 
-              component = { Details }
-            />
-          </Switch>
         </Router>
       </>
     );
